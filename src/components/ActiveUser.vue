@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div><strong>Username: </strong>{{ username }}</div>
-    <div><strong>Age: </strong>{{ age }}</div>
+    <h2><strong>Username: </strong>{{ username }}</h2>
+    <h3><strong>Age: </strong>{{ age }}</h3>
   </div>
 </template>
 

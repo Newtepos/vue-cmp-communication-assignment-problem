@@ -1,9 +1,11 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import ActiveUser from "./components/ActiveUser.vue"
+import UserData from "./components/UserData.vue"
 
 const MainApp = createApp(App)
 MainApp.component('active-user', ActiveUser);
+MainApp.component('user-data', UserData);
 MainApp.mount("#app");
 
 // Task 1:

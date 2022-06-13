@@ -1,4 +1,5 @@
 <template>
+  <user-data></user-data>
   <active-user
     v-for="user in users"
     :key="user.id"
@@ -9,14 +10,16 @@
 </template>
 
 <script>
+import UserData from "./components/UserData.vue";
 export default {
+  components: { UserData },
   data() {
     return {
       users: [
         {
           id: "Supakit",
           name: "Supakit",
-          age: 28,
+          age: 27,
         },
       ],
     };
