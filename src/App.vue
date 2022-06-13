@@ -25,9 +25,15 @@ export default {
     };
   },
   methods: {
-    addUser() {
-        alert("Testing");
-    }
-  }
+    addUser(username, age) {
+      const newUser = {
+        id: Date.now(),
+        name: username,
+        age,
+      };
+
+      this.users.push(newUser);
+    },
+  },
 };
 </script>

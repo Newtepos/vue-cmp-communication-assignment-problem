@@ -2,11 +2,11 @@
   <form @submit.prevent="addUser">
     <div>
       <label>Username: </label>
-      <input type="text" />
+      <input type="text" v-model="enteredUsername" />
     </div>
     <div>
       <label>Age: </label>
-      <input type="number" />
+      <input type="number" v-model="enteredAge" />
     </div>
     <button type="submit">Submit</button>
   </form>
@@ -14,11 +14,19 @@
 
 <script>
 export default {
-    emits: ['user-submit'],
-    methods: {
-        addUser() {
-            this.$emit("user-submit");
-        }
-    }
+  emits: ["user-submit"],
+  data() {
+    return {
+      enteredUsername: "",
+      enteredAge: "",
+    };
+  },
+  methods: {
+    addUser() {
+      this.$emit("user-submit", this.enteredUsername, this.enteredAge);
+      this.enteredUsername = "";
+      this.enteredAge = "";
+    },
+  },
 };
 </script>
