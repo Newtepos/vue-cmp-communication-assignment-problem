@@ -1,13 +1,25 @@
 <template>
-    <div>
-        <span><strong>Username: </strong></span>
-         <span><strong>Age: </strong></span>
-    </div>
+  <div>
+    <div><strong>Username: </strong>{{ username }}</div>
+    <div><strong>Age: </strong>{{ age }}</div>
+  </div>
 </template>
 
 <script>
 export default {
-    data() {
+  props: {
+    id: {
+      type: String,
+      required: true,
     },
-}
+    username: {
+      type: String,
+      required: true,
+    },
+    age: {
+      type: Number,
+      required: true,
+    },
+  },
+};
 </script>
