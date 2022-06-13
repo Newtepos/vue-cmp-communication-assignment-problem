@@ -1,5 +1,5 @@
 <template>
-  <user-data></user-data>
+  <user-data @user-submit="addUser"></user-data>
   <active-user
     v-for="user in users"
     :key="user.id"
@@ -24,5 +24,10 @@ export default {
       ],
     };
   },
+  methods: {
+    addUser() {
+        alert("Testing");
+    }
+  }
 };
 </script>

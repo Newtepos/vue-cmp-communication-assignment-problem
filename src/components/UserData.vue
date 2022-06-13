@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="">
+  <form @submit.prevent="addUser">
     <div>
       <label>Username: </label>
       <input type="text" />
@@ -13,5 +13,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+    emits: ['user-submit'],
+    methods: {
+        addUser() {
+            this.$emit("user-submit");
+        }
+    }
+};
 </script>
